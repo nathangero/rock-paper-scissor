@@ -23,7 +23,7 @@ function playGame() {
     var pcChoice = pcOptions[Math.floor(Math.random() * pcOptions.length)];
         alert("PC selected " + pcChoice);
 
-    if (userChoice === pcOptions){
+    if (userChoice === pcChoice){
         alert("It's tie");
         t++;
     }else if((userChoice === "R" && pcChoice === "S") || (userChoice === "P" && pcChoice === "R") || (userChoice === "S" && pcChoice === "P") ){
