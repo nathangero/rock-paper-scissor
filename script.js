@@ -1,5 +1,10 @@
 var playButton = document.querySelector("#play-button");
 
+
+var t = 0;
+var w = 0;
+var l = 0;
+
 function playGame() {
     var doesUserWantToPlay = confirm("Do you want play Rock, Paper, Scissors?");
 
@@ -17,10 +22,6 @@ function playGame() {
     var pcOptions = ["R","P","S"];
     var pcChoice = pcOptions[Math.floor(Math.random() * pcOptions.length)];
         alert("PC selected " + pcChoice);
-    
-    var t = 0;
-    var w = 0;
-    var l = 0;
 
     if (userChoice === pcOptions){
         alert("It's tie");
@@ -34,6 +35,14 @@ function playGame() {
     };
     
     alert("Current results \n Tie: " + t + "\n Wins: " + w + "\n Losses: " + l);
+
+    var playAgain = confirm("Do you want to play again?");
+    if (playAgain) {
+        playGame();
+    } else {
+        alert("Goodbye");
+        return;
+    }
 }
 
 // try later? repeatedly asking the user to have the valid input.
